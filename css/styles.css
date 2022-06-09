@@ -845,4 +845,48 @@ padding-bottom: 94px;
     background-color: rgba(28, 38, 38, 0.436);
     position: fixed;
     top: 0;
+    transition: opacity 300ms, visibility 300ms;
+}
+
+
+.backdrop .is-hidden .modal {
+    transform:  scale(0); 
+}
+
+
+.modal {
+    width: 500px;
+    min-height: 600px;
+    background-color: var(--btn-font-color);
+    border-radius: 5px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(1);
+    transition: transform 300ms;
+}
+
+
+.modal-close-btn {
+    width: 30px;
+    height: 30px;
+    border: 1px solid #999999;
+    border-radius: 50%;
+    background-color: transparent;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+
+
+.is-hidden {
+    visibility: hidden;
+    opacity: 0;
+    pointer-events: none;
+}
+
+
+.no-scroll {
+    overflow: hidden;
 }
